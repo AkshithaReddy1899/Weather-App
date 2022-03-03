@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <body>
+        <div class="btn-container">
+            <button id="select" onclick="displayOptions()">Get temperature by</button>
+            <button id="cityBtn" class="option" onclick="cityWeatherBtn()">
+                city
+              </button>
+            <button id="zipBtn" class="option" onclick="zipWeatherBtn()">
+                Zip code
+              </button>
+        </div>
+
+        <!--Onload-->
+        <section class="body">
+            <main id="main">
+                <h3 id="location"></h3>
+                <div class="weather">
+                    <img src="-" alt="-" id="weather-icon" />
+                    <h3 id="description"></h3>
+                    <h4 id="temperature">
+                        <span id="temperatureInCelcius"></span>
+                        <span id="temperatureInFahrenheit"></span>
+                    </h4>
+                </div>
+            </main>
+
+            <p class="error"></p>
+            <!--city-->
+
+            <section id="city">
+                <div class="city-container">
+                    <input type="text" placeholder="Enter a city Name" id="cityInput" />
+                    <button type="submit" class="submit" id="citySubmit">Submit</button>
+                </div>
+            </section>
+
+            <!--zipCode-->
+            <section id="zipCode">
+                <div class="zip-container">
+                    <input type="number" placeholder="Enter a zipCode" id="zipInput" />
+                    <input type="text" placeholder="Enter country code" id="countryCode" />
+                    <small>Eg.INDIA - IN</small>
+                    <button type="submit" class="submit" id="zipSubmit">Submit</button>
+                </div>
+                <div id="close">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                </div>
+                <div id="table"></div>
+            </section>
+        </section>
+    </body>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
