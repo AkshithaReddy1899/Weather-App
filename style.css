@@ -1,0 +1,155 @@
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*GENERAL STYLING*/
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    width: 100vw;
+}
+
+body {
+    background-color: #98c1d9;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+
+/*Load styling*/
+
+main {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+}
+
+#temperature {
+    margin: 15px;
+}
+
+
+/*drop down*/
+
+#select {
+    text-decoration: underline;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-container {
+    float: right;
+    margin: 30px 20px 10px auto;
+}
+
+.option {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+.option:hover {
+    font-weight: 600;
+}
+
+
+/*city zip styling*/
+
+input {
+    width: 80%;
+    height: auto;
+    margin: 30px auto 7px auto;
+    background-color: transparent;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0px 0px 15px 1px #3d5a80;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#city,
+#zipCode {
+    display: none;
+    margin-top: 10px;
+}
+
+.city-container,
+.zip-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit {
+    width: 80%;
+    border-radius: 50px;
+    background-color: rgb(224, 251, 252, 0.8);
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin: 20px;
+}
+
+.submit:hover {
+    background-color: #3d5a80;
+    color: whitesmoke;
+}
+
+.error {
+    color: red;
+}
+
+@media screen and (min-width: 600px) {
+    .btn-container {
+        margin: 30px 50px 0px auto;
+    }
+    #select {
+        font-size: 1rem;
+    }
+    .option {
+        font-size: 0.9rem;
+    }
+    input,
+    .submit {
+        width: 40%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    input,
+    .submit {
+        width: 35%;
+        height: auto;
+    }
+    body {
+        font-size: 1.2rem;
+    }
+}
